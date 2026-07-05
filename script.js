@@ -106,10 +106,15 @@ function updateAbout() {
     if (aboutSection) {
         aboutSection.innerHTML = `
             <div class="container">
-                <h2>About Me</h2>
+                <h2 class="m3-section-title">About Me</h2>
                 <div class="about-content">
                     <p>Accomplished risk analytics and digital transformation leader with 14+ years of global experience across retail banking, fintech, and management consulting. Proven record of building enterprise-scale credit risk, fraud, and portfolio analytics capabilities — delivering $10M+ in cumulative cost efficiencies and material uplifts in acquisition, underwriting, and fraud detection.</p>
                     <p>Hands-on across Python, SAS, GCP, Azure, AWS, Tableau, and Power BI, with working knowledge of EU regulatory frameworks (Basel III/IV, BCBS 239, GDPR, DORA, EBA guidelines, PSD2). Recognised for bridging business and technology, leading cross-functional teams of 15+, and engaging C-suite and regulatory stakeholders.</p>
+                    <div class="about-gif-row">
+                        <img src="https://media.giphy.com/media/f3iwJFOVOwuy7K6FFw/giphy.gif"
+                             alt="AI and machine learning visualization"
+                             class="about-gif" loading="lazy" onerror="this.style.display='none'"/>
+                    </div>
                     <div class="about-highlights">
                         <div class="highlight">
                             <div class="highlight-icon">🎯</div>
@@ -139,7 +144,7 @@ function updateContact() {
     if (contactSection) {
         contactSection.innerHTML = `
             <div class="container">
-                <h2>Get In Touch</h2>
+                <h2 class="m3-section-title">Get In Touch</h2>
                 <p>Open to relocation — Ireland / Netherlands / EU</p>
                 <div class="contact-info">
                     <div class="contact-item">

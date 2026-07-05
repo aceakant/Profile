@@ -7,6 +7,7 @@
     <title>AJAY KANT - Portfolio & Weather Dashboard</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
@@ -18,6 +19,8 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#timeline">Timeline</a></li>
                 <li><a href="#weather">Weather</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -26,9 +29,13 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-gif-overlay" aria-hidden="true">
+            <img src="https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif"
+                 alt="" class="hero-bg-gif" loading="eager" onerror="this.style.display='none'"/>
+        </div>
         <div class="hero-content">
             <h1>AJAY KANT</h1>
-            <p class="hero-subtitle">Head of Risk Analytics | Credit Risk & Fraud Leadership | AI/ML & Digital Transformation</p>
+            <p class="hero-subtitle">Head of Risk Analytics | Credit Risk &amp; Fraud Leadership | AI/ML &amp; Digital Transformation</p>
             <p>14+ years of global experience across retail banking, fintech, and management consulting</p>
             <div class="hero-stats">
                 <div class="stat">
@@ -51,15 +58,64 @@
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio-section">
         <div class="container">
-            <h2>Flagship Projects</h2>
+            <h2 class="m3-section-title">Flagship Projects</h2>
             <div class="projects-grid" id="projects-grid"></div>
+        </div>
+    </section>
+
+    <!-- Skills Visualization Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="m3-section-title">Skills &amp; Expertise</h2>
+            <p class="section-subtitle">Technical depth across analytics, cloud, and leadership domains</p>
+            <div class="skills-gif-accent">
+                <img src="https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif"
+                     alt="Data analytics in action" class="section-gif" loading="lazy"
+                     onerror="this.style.display='none'"/>
+            </div>
+            <div class="skills-charts-grid">
+                <div class="m3-card chart-card">
+                    <h3 class="chart-title">Core Competencies</h3>
+                    <div class="chart-wrapper"><canvas id="radarChart"></canvas></div>
+                </div>
+                <div class="m3-card chart-card">
+                    <h3 class="chart-title">Technical Proficiency</h3>
+                    <div class="chart-wrapper"><canvas id="skillsBarChart"></canvas></div>
+                </div>
+                <div class="m3-card chart-card">
+                    <h3 class="chart-title">Domain Expertise</h3>
+                    <div class="chart-wrapper"><canvas id="domainDoughnutChart"></canvas></div>
+                </div>
+                <div class="m3-card chart-card">
+                    <h3 class="chart-title">Platform Coverage</h3>
+                    <div class="chart-wrapper"><canvas id="platformPolarChart"></canvas></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section id="timeline" class="timeline-section">
+        <div class="container">
+            <h2 class="m3-section-title">Career Journey</h2>
+            <p class="section-subtitle">14+ years building risk analytics capabilities across continents</p>
+            <div class="timeline-gif-accent">
+                <img src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyc/giphy.gif"
+                     alt="Career growth visualization" class="section-gif" loading="lazy"
+                     onerror="this.style.display='none'"/>
+            </div>
+            <div class="m3-card timeline-impact-card">
+                <h3 class="chart-title">Quantified Impact Across Roles</h3>
+                <div class="chart-wrapper chart-wrapper--wide"><canvas id="impactBarChart"></canvas></div>
+            </div>
+            <div class="timeline-track" id="timeline-track"></div>
         </div>
     </section>
 
     <!-- Weather Dashboard Section -->
     <section id="weather" class="weather-section">
         <div class="container">
-            <h2>Weather Dashboard</h2>
+            <h2 class="m3-section-title">Weather Dashboard</h2>
             <div class="weather-container">
                 <!-- Search Box -->
                 <div class="search-box">
@@ -109,6 +165,8 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="visualizations.js"></script>
     <script src="script.js"></script>
     <script src="weather.js"></script>
 </body>
