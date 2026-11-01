@@ -47,10 +47,10 @@ function initRadarChart() {
     new Chart(ctx, {
         type: 'radar',
         data: {
-            labels: ['Risk Analytics', 'Credit Modelling', 'Fraud Detection', 'AI/ML Deployment', 'Team Leadership', 'Regulatory Compliance'],
+            labels: ['Fraud Detection', 'Credit Modelling', 'GenAI & LLMs', 'Team Leadership', 'Data Platforms', 'Regulatory & Governance'],
             datasets: [{
                 label: 'Proficiency',
-                data: [95, 90, 88, 85, 90, 80],
+                data: [95, 92, 85, 92, 88, 82],
                 backgroundColor: 'rgba(102, 126, 234, 0.2)',
                 borderColor: M3_PALETTE.primary,
                 pointBackgroundColor: M3_PALETTE.primary,
@@ -84,10 +84,10 @@ function initSkillsBarChart() {
     const chart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['Python', 'SQL', 'SAS', 'Tableau', 'ML/AI Frameworks', 'GCP', 'Power BI', 'Azure', 'R', 'APIs'],
+            labels: ['Python', 'SAS (Base/EG/Viya)', 'SQL / Teradata', 'Tableau', 'GCP', 'LLMs / GenAI', 'Power BI / Looker', 'Azure', 'AWS', 'R'],
             datasets: [{
                 label: 'Proficiency (%)',
-                data: [95, 92, 90, 88, 85, 82, 80, 78, 72, 70],
+                data: [95, 93, 92, 90, 85, 82, 80, 78, 65, 68],
                 backgroundColor: M3_PALETTE.series,
                 borderRadius: 8,
                 borderSkipped: false
@@ -128,9 +128,9 @@ function initDomainDoughnut() {
     new Chart(ctx, {
         type: 'doughnut',
         data: {
-            labels: ['Credit Risk', 'Fraud Detection', 'Portfolio Analytics', 'AI/ML Strategy', 'Regulatory', 'Digital Transformation'],
+            labels: ['Fraud Detection', 'Credit Risk & Modelling', 'GenAI & LLMs', 'Portfolio Analytics', 'Data Platforms & Governance', 'Regulatory'],
             datasets: [{
-                data: [30, 25, 20, 15, 5, 5],
+                data: [28, 26, 16, 15, 10, 5],
                 backgroundColor: M3_PALETTE.series,
                 hoverOffset: 8
             }]

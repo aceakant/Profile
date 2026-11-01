@@ -1,74 +1,78 @@
 // Projects Data
 const projectsData = [
     {
-        title: "L&T Finance - Head of Risk Analytics",
+        title: "L&T Finance — Fraud Risk Analytics",
         company: "L&T Finance",
         dates: "Dec 2023 – Present",
-        role: "Head of Risk Analytics (Retail Risk & RCU)",
-        description: "Standing up an enterprise-grade risk analytics function at one of India's largest NBFCs (~USD 11B retail book).",
+        role: "Head of Fraud Risk Analytics",
+        description: "Set up the Fraud Risk Analytics team from scratch at one of India's largest NBFCs (~USD 11B retail book) and embedded ML and GenAI into fraud control and underwriting.",
         impact: [
-            "Built central risk-analytics capability (data-mart, dashboards, governance, BI team)",
-            "ML-based fraud detection improving early-detection rates by 20%",
-            "Ensemble risk model spanning dealer, field-sales, and geographic scorecards",
-            "BCBS 239 aligned data pipelines and reporting"
+            "+20% early fraud detection via ML Early-Warning System (co-designed with EY & BCG)",
+            "Built LLM-powered analytics agent — plain-English queries on fraud & portfolio data",
+            "LLM document-verification tool: cut processing from hours to minutes",
+            "Ensemble scorecard framework: dealer, field-sales & geographic risk scoring",
+            "GenAI adoption with DPDP Act-compliant controls (consent, masking, human review)"
         ],
-        technologies: ["Python", "SAS", "GCP", "Azure", "Tableau", "ML/AI"]
+        technologies: ["Python", "GCP", "LLMs / GenAI", "SAS", "Tableau", "ML/AI", "DPDP Act"]
     },
     {
-        title: "Axis Bank - Universal Underwriting Programme",
+        title: "Axis Bank — Universal Underwriting Programme",
         company: "Axis Bank",
         dates: "Dec 2022 – Dec 2023",
         role: "Head of Alternate Data — Data Sciences (BIU)",
-        description: "Led a bank-wide alternate-data programme feeding credit decisioning, KYC, and fraud engines.",
+        description: "Built a 12-person Alternate Data team from scratch and led the bank-wide programme feeding credit decisioning, KYC and fraud engines for 100M+ customers.",
         impact: [
-            "+25% new-to-bank acquisition efficiency",
-            "−20% reduction in early-delinquency exposure",
-            "Productionised 8 alternate-data assets",
-            "Satellite-data signals for agri-customer risk profiling"
+            "+25% new-to-bank acquisition efficiency across thin-file & rural segments",
+            "−20% risk exposure for new-to-credit and KYC-lite customers",
+            "8 production data products: open banking, UPI payments, satellite farmland, telecom",
+            "UPI model for cross-sell to 100M+ existing customers",
+            "Data Centre of Excellence with executive-committee governance"
         ],
-        technologies: ["Python", "GCP", "Tableau", "GenAI", "Account Aggregator API"]
+        technologies: ["Python", "GCP", "Account Aggregator API", "UPI Data", "Satellite Data", "Tableau", "GenAI"]
     },
     {
-        title: "Dhani Loans - Risk & Policy Build-out",
+        title: "Dhani Loans — Risk & Policy Build-out",
         company: "Dhani Loans & Services",
-        dates: "Apr 2019 – Apr 2022",
+        dates: "Apr 2019 – Dec 2022",
         role: "Assistant General Manager — Risk Management",
-        description: "Founded and scaled the Risk Management and Policy organisation from scratch.",
+        description: "Recruited to build the Risk and Policy function from zero across secured and unsecured consumer lending; carried the business through COVID.",
         impact: [
-            "Founded risk org (team of 15) enabling survival through COVID",
-            "Centralised KRI dashboards for CRO/CEO weekly visibility",
-            "SMS-based alternate scoring for KYC-lite onboarding",
-            "Led ~INR 200 Cr portfolio sale"
+            "Built Risk & Policy team from scratch to 15 people (Risk 9, Policy 6)",
+            "~€20M portfolio sale; moratorium, restructuring & securitisation strategy",
+            "SMS-based alternate-data score for KYC-lite onboarding & fraud screening",
+            "+12% approval rate, −27% operational workload via STP upgrade",
+            "Weekly KRI dashboards presented to CRO & CEO; RBI audit inputs"
         ],
-        technologies: ["Python", "R", "SAS", "SMS APIs", "Credit Bureau Integration"]
+        technologies: ["Python", "R", "SAS", "SQL", "SMS APIs", "Credit Bureau Integration"]
     },
     {
-        title: "JPMorgan Chase - Fraud Risk Strategy",
+        title: "JPMorgan Chase — Fraud Risk Strategy",
         company: "JPMorgan Chase",
         dates: "May 2016 – Apr 2019",
-        role: "Fraud Risk Strategy — Consumer & Business Banking",
-        description: "Second Line of Defence for US Consumer Banking fraud across multiple channels.",
+        role: "Fraud Risk Strategy — Consumer & Business Banking (2nd Line of Defence)",
+        description: "Second Line of Defence for US Consumer Banking fraud: debit & credit cards, cheque, EMM and wire. Rebuilt fraud forecasting and MI.",
         impact: [
-            "−15% digital fraud exposure reduction",
-            "$1M/year reporting cost savings",
-            "Fraud-attack-lifecycle forecasting methodology",
-            "Visa partnership generating $1.0–1.5M/year"
+            "−15% digital fraud exposure across US Consumer Banking",
+            "$1M/year reporting cost reduction",
+            "Fraud-attack-lifecycle forecasting method adopted across plastic & digital channels",
+            "Visa partnership: redesigned low-dollar merchant-claims strategy — $1–1.5M/year recovery",
+            "KRI & diagnostic metric framework for monthly CRO Risk Forum"
         ],
-        technologies: ["Tableau", "Python", "SQL", "SAS", "Statistical Forecasting"]
+        technologies: ["Tableau", "Python", "SQL", "SAS", "Statistical Forecasting", "BCBS Fraud Reporting"]
     },
     {
-        title: "Westpac - Fraud Framework & Campaign Management",
-        company: "Westpac (via TCS)",
+        title: "Westpac — Fraud Framework & Campaign Analytics",
+        company: "Tata Consultancy Services (Westpac, Australia)",
         dates: "May 2014 – May 2016",
         role: "Senior Business Analyst — Consultant",
-        description: "Risk analytics and campaign management consulting engagement.",
+        description: "Risk analytics and campaign management consulting: big-data fraud analytics on ~8 billion transactions.",
         impact: [
             "$10M annual fraud-loss reduction",
-            "30% improvement in fraud-detection KPIs",
-            "18% cross-sell revenue uplift",
-            "$1M operational savings via digital adoption"
+            "+30% fraud-detection KPI improvement",
+            "+18% cross-sell revenue via logistic-regression targeting of top 20% prospects",
+            "~$1M digital-adoption savings via paperless multi-channel campaigns"
         ],
-        technologies: ["SAS", "SQL", "Python", "Logistic Regression"]
+        technologies: ["SAS", "SQL", "Python", "Logistic Regression", "Big Data Analytics"]
     }
 ];
 
@@ -108,8 +112,8 @@ function updateAbout() {
             <div class="container">
                 <h2 class="m3-section-title">About Me</h2>
                 <div class="about-content">
-                    <p>Accomplished risk analytics and digital transformation leader with 14+ years of global experience across retail banking, fintech, and management consulting — now targeting a senior role in European financial services. Proven record of building enterprise-scale credit risk, fraud, and portfolio analytics capabilities, delivering $10M+ in cumulative value and material uplifts in acquisition, underwriting, and fraud detection.</p>
-                    <p>Hands-on across Python, SAS, GCP, Azure, AWS, Tableau, and Power BI. Working knowledge of EU regulatory frameworks — Basel III/IV, BCBS 239, GDPR, DORA, EBA guidelines, PSD2 — with experience building BCBS 239-aligned data pipelines and governance structures. Recognised for bridging business and technology, leading cross-functional teams of 15+, and engaging C-suite and regulatory stakeholders. Open to relocation to Ireland, Netherlands, Germany or wider EU/EEA.</p>
+                    <p>Risk analytics leader with 14+ years across retail banking, fintech and consulting in India, the US and Australia. I build credit-risk and fraud teams end to end — scorecards, ML models, data platforms, governance and C-suite reporting — and bring Generative AI into everyday risk work, including LLM-powered agents that automate data analysis. I have built the team from scratch at each of my last three employers: Fraud Risk Analytics (L&T Finance, 7 people), Alternate Data (Axis Bank, 12 people) and Risk & Policy (Dhani Loans, 15 people).</p>
+                    <p>Programmes I have led have delivered $10M+ in annual fraud-loss reduction, a 25% lift in new-customer acquisition efficiency and a 20% improvement in early fraud detection. Technically hands-on across Python, SAS (Base, EG, E-Miner, Viya), SQL, Teradata, GCP, Azure, AWS, Tableau, Power BI and Looker. Applied: BCBS 239, BCBS fraud reporting (JPMorgan). Working knowledge: Basel III/IV, GDPR, DORA, EBA guidelines, PSD2. Fluent English. Open to relocation to Ireland, Netherlands, Germany or Denmark.</p>
                     <div class="about-gif-row">
                         <img src="https://media.giphy.com/media/f3iwJFOVOwuy7K6FFw/giphy.gif"
                              alt="AI and machine learning visualization"
@@ -181,49 +185,55 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // EU Value Strip Data
 const euValueStats = [
-    { number: '14+', label: 'Years Banking & Fintech' },
-    { number: '$10M+', label: 'Cumulative Value Delivered' },
-    { number: '6', label: 'EU Regulatory Frameworks' },
-    { number: '3', label: 'Global Markets Covered' }
+    { number: '$10M', label: 'Annual Fraud-Loss Reduction' },
+    { number: '+25%', label: 'Acquisition Efficiency Uplift' },
+    { number: '3', label: 'Teams Built from Scratch' },
+    { number: '−15%', label: 'Digital Fraud Exposure Cut' }
 ];
 
 // EU Regulatory Framework Data
 const regulatoryData = [
     {
-        icon: '🏛️',
-        title: 'Basel III / IV',
-        desc: 'Capital adequacy, credit risk RWA computation, ICAAP/ILAAP frameworks and stress testing under EBA guidelines.',
-        tags: ['Credit RWA', 'ICAAP', 'ILAAP', 'Stress Testing']
-    },
-    {
         icon: '📊',
         title: 'BCBS 239',
-        desc: 'Risk data aggregation and reporting principles — data lineage, accuracy, completeness and timeliness for board-level risk reporting.',
+        badge: 'Applied',
+        desc: 'Built BCBS 239-aligned data pipelines and risk reporting at JPMorgan Chase — data lineage, accuracy, completeness and timeliness for board-level and regulatory reporting.',
         tags: ['Data Lineage', 'Risk Reporting', 'Data Quality', 'Governance']
     },
     {
         icon: '🔐',
-        title: 'GDPR & Data Privacy',
-        desc: 'Privacy-by-design ML models, data minimisation in credit decisioning, consent management in alternate-data pipelines.',
-        tags: ['Privacy by Design', 'Data Minimisation', 'Consent Mgmt']
+        title: 'GDPR & EU AI Act',
+        badge: 'Working Knowledge',
+        desc: 'Built GenAI tools with GDPR-equivalent privacy controls (India\'s DPDP Act): consent-based data use, role-based access, data masking and human review before decisions — the same principles GDPR and the EU AI Act expect.',
+        tags: ['Privacy by Design', 'Data Minimisation', 'AI Governance', 'Consent Mgmt']
+    },
+    {
+        icon: '🏛️',
+        title: 'Basel III / IV',
+        badge: 'Working Knowledge',
+        desc: 'Capital adequacy, credit risk RWA, ICAAP/ILAAP frameworks and stress testing under EBA guidelines — applied in credit-risk scorecard and portfolio management roles.',
+        tags: ['Credit RWA', 'ICAAP', 'ILAAP', 'Stress Testing']
     },
     {
         icon: '⚡',
         title: 'DORA',
-        desc: 'Digital Operational Resilience Act — ICT risk frameworks, third-party risk management and incident reporting for EU financial entities.',
-        tags: ['ICT Risk', 'Incident Reporting', 'Third-Party Risk']
+        badge: 'Working Knowledge',
+        desc: 'Digital Operational Resilience Act — ICT risk management, third-party risk governance and incident reporting for EU financial entities.',
+        tags: ['ICT Risk', 'Third-Party Risk', 'Incident Reporting']
     },
     {
         icon: '📋',
         title: 'EBA Guidelines',
-        desc: 'EBA GL on credit granting and monitoring, loan origination standards, creditworthiness assessment and NPL management.',
-        tags: ['Credit Granting', 'NPL Mgmt', 'Loan Origination']
+        badge: 'Working Knowledge',
+        desc: 'EBA GL on credit granting and monitoring — loan origination standards, creditworthiness assessment, forbearance and NPL management frameworks.',
+        tags: ['Credit Granting', 'NPL Mgmt', 'Loan Origination', 'Forbearance']
     },
     {
         icon: '💳',
         title: 'PSD2 / Open Banking',
-        desc: 'Account Aggregator equivalent experience; alternate data from open banking APIs for credit decisioning and fraud detection.',
-        tags: ['Open Banking', 'API Integration', 'Alt Data', 'Fraud Detection']
+        badge: 'Working Knowledge',
+        desc: 'Hands-on experience with the open-banking equivalent (India\'s Account Aggregator) — bank statements, tax returns, UPI payment data for credit decisioning and fraud detection.',
+        tags: ['Open Banking', 'Account Aggregator', 'Alt Data', 'Fraud Detection']
     }
 ];
 
@@ -249,7 +259,10 @@ function renderRegulatory() {
     if (!grid) return;
     grid.innerHTML = regulatoryData.map(r => `
         <div class="regulatory-card">
-            <div class="regulatory-card-icon">${r.icon}</div>
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.5rem;">
+                <div class="regulatory-card-icon" style="margin-bottom:0;">${r.icon}</div>
+                <span style="font-size:0.68rem;font-weight:700;padding:0.2rem 0.6rem;border-radius:9999px;background:${r.badge==='Applied'?'rgba(46,196,182,0.15)':'rgba(102,126,234,0.12)'};color:${r.badge==='Applied'?'#2ec4b6':'#667eea'};letter-spacing:0.04em;white-space:nowrap;">${r.badge}</span>
+            </div>
             <div class="regulatory-card-title">${r.title}</div>
             <div class="regulatory-card-desc">${r.desc}</div>
             <div class="regulatory-card-tags">
@@ -269,22 +282,22 @@ function renderOpportunity() {
                 Available Now — Target Start: Q1 2025
             </div>
             <div class="opportunity-divider"></div>
-            <h2 class="opportunity-title">Ready to Lead Risk Analytics in Europe</h2>
+            <h2 class="opportunity-title">Ready to Lead Risk, Fraud &amp; AI Analytics in Europe</h2>
             <p class="opportunity-subtitle">
-                14+ years of enterprise risk analytics leadership across retail banking, fintech and consulting —
-                credit risk, fraud detection and AI/ML deployment. Seeking a senior role where I can build,
-                transform and deliver measurable impact for a European financial institution.
+                I build risk and fraud analytics teams from scratch — scorecards, ML models, GenAI agents, governance
+                and C-suite reporting. Three teams built from scratch. $10M+ in measurable value delivered.
+                Seeking a senior leadership role in banking, fintech, payments or consulting.
             </p>
             <div class="opportunity-locations">
-                <span class="location-chip">🇮🇪 Ireland</span>
-                <span class="location-chip">🇳🇱 Netherlands</span>
-                <span class="location-chip">🇩🇪 Germany</span>
-                <span class="location-chip">🇫🇷 France</span>
-                <span class="location-chip">🇪🇺 EU / EEA</span>
+                <span class="location-chip">🇮🇪 Ireland <small style="opacity:0.7;font-size:0.72em">Critical Skills</small></span>
+                <span class="location-chip">🇳🇱 Netherlands <small style="opacity:0.7;font-size:0.72em">HSM Route</small></span>
+                <span class="location-chip">🇩🇪 Germany <small style="opacity:0.7;font-size:0.72em">EU Blue Card</small></span>
+                <span class="location-chip">🇩🇰 Denmark <small style="opacity:0.7;font-size:0.72em">Pay Limit / Fast-Track</small></span>
             </div>
+            <p style="opacity:0.65;font-size:0.82rem;margin-bottom:1.75rem;">English (fluent) &nbsp;·&nbsp; Hindi (native) &nbsp;·&nbsp; Available for video interviews at any time</p>
             <div class="opportunity-btns">
                 <a href="mailto:aceakant@gmail.com" class="btn-eu-primary">📧 aceakant@gmail.com</a>
-                <a href="https://linkedin.com/in/ajuhack" target="_blank" class="btn-eu-secondary">💼 LinkedIn Profile</a>
+                <a href="https://linkedin.com/in/ajuhack" target="_blank" class="btn-eu-secondary">💼 linkedin.com/in/ajuhack</a>
             </div>
         </div>
     `;
