@@ -7,6 +7,7 @@
     <title>AJAY KANT - Portfolio & Weather Dashboard</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
@@ -18,48 +19,186 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#timeline">Timeline</a></li>
                 <li><a href="#weather">Weather</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#showcase">Showcase</a></li>
+                <li><a href="#articles">Articles</a></li>
+                <li><a href="#eu-regulatory">EU Expertise</a></li>
+                <li><a href="#opportunity" class="nav-cta">Hire Me</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-gif-overlay" aria-hidden="true">
+            <img src="https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif"
+                 alt="" class="hero-bg-gif" loading="eager" onerror="this.style.display='none'"/>
+        </div>
         <div class="hero-content">
             <h1>AJAY KANT</h1>
-            <p class="hero-subtitle">Head of Risk Analytics | Credit Risk & Fraud Leadership | AI/ML & Digital Transformation</p>
-            <p>14+ years of global experience across retail banking, fintech, and management consulting</p>
+            <p class="hero-subtitle">Risk, Fraud &amp; AI Analytics Leader | Credit Strategy | GenAI &amp; ML-Driven Decisioning</p>
+            <p>14+ years across retail banking, fintech &amp; consulting — India, US, Australia. 3 teams built from scratch.</p>
             <div class="hero-stats">
                 <div class="stat">
-                    <div class="stat-number">14+</div>
-                    <div class="stat-label">Years Experience</div>
+                    <div class="stat-number">$10M</div>
+                    <div class="stat-label">Annual Fraud-Loss Reduction</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-number">$10M+</div>
-                    <div class="stat-label">Value Delivered</div>
+                    <div class="stat-number">+25%</div>
+                    <div class="stat-label">Acquisition Efficiency</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-number">15+</div>
-                    <div class="stat-label">Team Members Led</div>
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Teams Built from Scratch</div>
                 </div>
+                <div class="stat">
+                    <div class="stat-number">−15%</div>
+                    <div class="stat-label">Digital Fraud Exposure</div>
+                </div>
+            </div>
+            <div class="availability-badge">
+                <span class="pulse-dot"></span>
+                Actively Seeking EU Opportunities — Ireland · Netherlands · Germany · Denmark
             </div>
             <a href="#portfolio" class="btn btn-primary">View My Work</a>
         </div>
     </section>
 
+    <!-- Work Showcase (Videos) -->
+    <section id="showcase" class="showcase-section">
+        <div class="container">
+            <h2 class="m3-section-title">Work Showcase</h2>
+            <p class="section-subtitle">Presentations from L&T Finance Risk Control Unit — fraud analytics & ML-driven decisioning</p>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video controls preload="metadata" class="showcase-video"
+                               poster="">
+                            <source src="videos/rcu-analytics-cinematic.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-card-body">
+                        <span class="video-tag">Risk Control Unit · L&T Finance</span>
+                        <h3 class="video-title">RCU Analytics — Cinematic Overview</h3>
+                        <p class="video-desc">Enterprise fraud risk analytics build-out: data-mart, ML models, Early-Warning System and GenAI integration across India's largest NBFC retail book.</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video controls preload="metadata" class="showcase-video">
+                            <source src="videos/rcu-guardian.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-card-body">
+                        <span class="video-tag">Risk Control Unit · L&T Finance</span>
+                        <h3 class="video-title">RCU Guardian — Fraud Defence Framework</h3>
+                        <p class="video-desc">Deep-dive into the RCU Guardian framework: fraud-rule engine, scorecard ensemble, field-sales risk controls and CRO-level governance dashboards.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section id="articles" class="articles-section">
+        <div class="container">
+            <div class="articles-header">
+                <div>
+                    <h2 class="m3-section-title" style="margin-bottom:0.5rem;">Insights &amp; Articles</h2>
+                    <p class="section-subtitle" style="margin-top:0;">Weekly perspectives on risk analytics, fraud detection and AI in financial services</p>
+                </div>
+                <span class="articles-freq-badge">📅 Weekly</span>
+            </div>
+            <div class="articles-grid" id="articles-grid">
+                <div class="articles-loading">Loading articles…</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Reader Modal -->
+    <div class="article-modal" id="article-modal" hidden>
+        <div class="article-modal-overlay" onclick="closeArticle()"></div>
+        <div class="article-modal-panel" id="article-modal-panel">
+            <button class="article-modal-close" onclick="closeArticle()">✕</button>
+            <div class="article-modal-content" id="article-modal-content"></div>
+        </div>
+    </div>
+
+    <!-- EU Value Strip -->
+    <section class="eu-value-section" id="eu-strip"></section>
+
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio-section">
         <div class="container">
-            <h2>Flagship Projects</h2>
+            <h2 class="m3-section-title">Flagship Projects</h2>
             <div class="projects-grid" id="projects-grid"></div>
+        </div>
+    </section>
+
+    <!-- Skills Visualization Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="m3-section-title">Skills &amp; Expertise</h2>
+            <p class="section-subtitle">Python · SAS (Base/EG/E-Miner/Viya) · SQL · Teradata · GCP · Azure · AWS · Tableau · Power BI · Looker · LLMs / GenAI</p>
+            <div class="skills-gif-accent">
+                <img src="https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif"
+                     alt="Data analytics in action" class="section-gif" loading="lazy"
+                     onerror="this.style.display='none'"/>
+            </div>
+            <div class="skills-charts-grid">
+                <div class="m3-card chart-card">
+                    <h3 class="chart-title">Core Competencies</h3>
+                    <div class="chart-wrapper"><canvas id="radarChart"></canvas></div>
+                </div>
+                <div class="m3-card chart-card">
+                    <h3 class="chart-title">Technical Proficiency</h3>
+                    <div class="chart-wrapper"><canvas id="skillsBarChart"></canvas></div>
+                </div>
+                <div class="m3-card chart-card">
+                    <h3 class="chart-title">Domain Expertise</h3>
+                    <div class="chart-wrapper"><canvas id="domainDoughnutChart"></canvas></div>
+                </div>
+                <div class="m3-card chart-card">
+                    <h3 class="chart-title">Platform Coverage</h3>
+                    <div class="chart-wrapper"><canvas id="platformPolarChart"></canvas></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EU Regulatory Expertise Section -->
+    <section id="eu-regulatory" class="eu-regulatory-section">
+        <div class="container">
+            <h2 class="m3-section-title">EU Regulatory Expertise</h2>
+            <p class="section-subtitle">Deep knowledge of the European financial services regulatory landscape — ready to contribute from day one</p>
+            <div class="regulatory-grid" id="regulatory-grid"></div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section id="timeline" class="timeline-section">
+        <div class="container">
+            <h2 class="m3-section-title">Career Journey</h2>
+            <p class="section-subtitle">14+ years building risk analytics capabilities across continents</p>
+            <div class="timeline-gif-accent">
+                <img src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyc/giphy.gif"
+                     alt="Career growth visualization" class="section-gif" loading="lazy"
+                     onerror="this.style.display='none'"/>
+            </div>
+            <div class="m3-card timeline-impact-card">
+                <h3 class="chart-title">Quantified Impact Across Roles</h3>
+                <div class="chart-wrapper chart-wrapper--wide"><canvas id="impactBarChart"></canvas></div>
+            </div>
+            <div class="timeline-track" id="timeline-track"></div>
         </div>
     </section>
 
     <!-- Weather Dashboard Section -->
     <section id="weather" class="weather-section">
         <div class="container">
-            <h2>Weather Dashboard</h2>
+            <h2 class="m3-section-title">Weather Dashboard</h2>
             <div class="weather-container">
                 <!-- Search Box -->
                 <div class="search-box">
@@ -96,6 +235,13 @@
         </div>
     </section>
 
+    <!-- Open to Opportunities -->
+    <section id="opportunity" class="opportunity-section">
+        <div class="container">
+            <div id="opportunity-content"></div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="about"></section>
 
@@ -105,10 +251,14 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 AJAY KANT. All rights reserved. | Open to relocation — Ireland / Netherlands / EU</p>
+            <p>&copy; 2026 AJAY KANT. Risk, Fraud &amp; AI Analytics Leader.</p>
+            <p style="font-size:0.8rem;opacity:0.7;margin-top:0.4rem;">BSc, University of Delhi (2009) &nbsp;·&nbsp; SAS Base Certified &nbsp;·&nbsp; GenAI on Google Cloud (2023) &nbsp;·&nbsp; Speaker, Monnai 2024</p>
+            <p style="font-size:0.8rem;opacity:0.7;margin-top:0.25rem;">Relocating to Ireland · Netherlands · Germany · Denmark &nbsp;|&nbsp; aceakant@gmail.com &nbsp;|&nbsp; linkedin.com/in/ajuhack</p>
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="visualizations.js"></script>
     <script src="script.js"></script>
     <script src="weather.js"></script>
 </body>

@@ -1,0 +1,50 @@
+{
+  "articles": [
+    {
+      "id": "genai-risk-teams-2026",
+      "title": "Building GenAI-Ready Risk Teams: Three Lessons from India's NBFCs",
+      "date": "2026-11-01",
+      "category": "AI & Risk Analytics",
+      "tags": ["GenAI", "LLMs", "Risk Management", "Team Building"],
+      "summary": "How I introduced LLM-powered agents into fraud risk analytics — and what every risk leader considering GenAI should know before they start.",
+      "readTime": "6 min read",
+      "content": [
+        "When I joined L&T Finance in December 2023, Generative AI was everywhere in the news — but almost nowhere in regulated financial services. The compliance teams were nervous, the CRO had questions, and the data scientists were excited. Sound familiar?",
+        "Over the next twelve months, I led the introduction of two LLM-based tools into our fraud and operations workflow. Here are the three things I wish I had known at the start.",
+        "## 1. Start with a problem only AI can solve efficiently — not a proof of concept",
+        "Our first use case was a plain-English query agent for the fraud data warehouse. Analysts spent 30–40% of their time writing SQL and building ad-hoc charts for management queries. The LLM agent replaced that entirely: a question in plain English returns an analysis, a chart and a written summary in under two minutes. The time saving was immediate and measurable — and that made it easy to justify the next step.",
+        "The mistake many teams make is building a demo first and hunting for a use case second. Regulators and CROs do not fund demos. They fund solutions to named problems with a before-and-after metric.",
+        "## 2. Compliance is not the blocker — it is the brief",
+        "India's DPDP Act 2023 is GDPR's younger sibling. Before we could use any customer data with an LLM, we had to document consent basis, data-flow paths, masking logic and human-review checkpoints. That took three weeks of work with the Legal and Compliance teams.",
+        "Those three weeks were the best investment we made. The compliance brief forced us to be precise about exactly what data the model would see, in what form, and under what conditions. The result was a design that would pass a GDPR audit in Europe without significant rework — because the principles are the same: consent, minimisation, access control, explainability and human oversight before any decision is made.",
+        "## 3. The team matters more than the model",
+        "We ran the entire programme with a 7-person team: two data scientists, two data engineers, two analysts and one product owner (me). We used no proprietary LLM infrastructure — just GCP's Vertex AI and standard API calls. The budget was approximately €0.2M for the year.",
+        "What made it work was the combination of domain knowledge and engineering discipline. The data scientists understood fraud patterns. The data engineers understood the data warehouse. I understood what the CRO needed to see on Monday morning. The LLM was the accelerant — the team was the engine.",
+        "If you are a risk leader in Europe considering GenAI: the technology is ready. The regulatory framework (GDPR, EU AI Act) is actually a useful design constraint, not a barrier. And the talent to build it is available. The question is whether you have a specific problem to solve and the organisational will to change how analysts work.",
+        "I am open to discussing how I built this — and how a similar approach could work in a European bank or fintech. Reach me at aceakant@gmail.com or on LinkedIn."
+      ]
+    },
+    {
+      "id": "alternate-data-credit-2026",
+      "title": "Beyond the Bureau: How Alternate Data is Reshaping Credit Decisioning in Emerging Markets",
+      "date": "2026-10-18",
+      "category": "Credit Risk",
+      "tags": ["Alternate Data", "Credit Scoring", "Open Banking", "Fintech"],
+      "summary": "Satellite farmland imagery, real-time UPI payments, telecom signals — the alternate data revolution in India offers a blueprint for European thin-file lending.",
+      "readTime": "7 min read",
+      "content": [
+        "India has 1.4 billion people. The formal credit bureau covers roughly 300 million of them. The remaining billion — farmers, gig workers, micro-entrepreneurs, first-time borrowers — are invisible to traditional credit models.",
+        "At Axis Bank, I led the programme that built 8 production data products to reach those customers. What we built in India is directly relevant to the thin-file challenge European lenders face under PSD2 and the Account Aggregator framework.",
+        "## The three pillars of alternate data",
+        "**Digital public infrastructure** was our first pillar. India's Account Aggregator framework (the PSD2 equivalent) gives consented access to bank statements and tax returns. Real-time UPI payment data — India processes 14 billion transactions per month — gave us velocity, regularity and merchant-category signals. We built models on this data for 100 million existing customers who had never applied for a loan.",
+        "**Partnership data** was the second pillar. Satellite imagery of farmland — crop type, field size, irrigation coverage — gave us the first objective signal of income for rural borrowers. Telecom recharge patterns gave us a thin-file score for customers with no bureau history at all. Both went live in production underwriting within ten months.",
+        "**Internal assets** were the third pillar and the most underused by most banks. Geo-location data from mobile app sessions, combined with company-registry and sales-tax data, gave us income-estimation models for urban self-employed customers that outperformed bureau scores for this segment.",
+        "## What this means for European lenders",
+        "PSD2 has given European banks the open-banking plumbing. Most are using it for payment initiation. Few are using it systematically for credit underwriting — and almost none are using it for thin-file, new-to-credit or migrant-worker segments.",
+        "The playbook is available. The technology is mature. The data exists. What is missing in most European institutions is the team structure and the organisational mandate to move from experiment to production.",
+        "The Universal Underwriting programme at Axis Bank delivered +25% acquisition efficiency and –20% risk exposure for exactly those underserved segments. A similar programme in a European context — using PSD2 data, open banking transaction signals and consented telecom data — could expand the addressable market materially while reducing early delinquency.",
+        "I am actively looking for the opportunity to build this in Europe. If your institution is working on this problem, I would welcome the conversation."
+      ]
+    }
+  ]
+}
