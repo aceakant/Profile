@@ -108,8 +108,8 @@ function updateAbout() {
             <div class="container">
                 <h2 class="m3-section-title">About Me</h2>
                 <div class="about-content">
-                    <p>Accomplished risk analytics and digital transformation leader with 14+ years of global experience across retail banking, fintech, and management consulting. Proven record of building enterprise-scale credit risk, fraud, and portfolio analytics capabilities — delivering $10M+ in cumulative cost efficiencies and material uplifts in acquisition, underwriting, and fraud detection.</p>
-                    <p>Hands-on across Python, SAS, GCP, Azure, AWS, Tableau, and Power BI, with working knowledge of EU regulatory frameworks (Basel III/IV, BCBS 239, GDPR, DORA, EBA guidelines, PSD2). Recognised for bridging business and technology, leading cross-functional teams of 15+, and engaging C-suite and regulatory stakeholders.</p>
+                    <p>Accomplished risk analytics and digital transformation leader with 14+ years of global experience across retail banking, fintech, and management consulting — now targeting a senior role in European financial services. Proven record of building enterprise-scale credit risk, fraud, and portfolio analytics capabilities, delivering $10M+ in cumulative value and material uplifts in acquisition, underwriting, and fraud detection.</p>
+                    <p>Hands-on across Python, SAS, GCP, Azure, AWS, Tableau, and Power BI. Working knowledge of EU regulatory frameworks — Basel III/IV, BCBS 239, GDPR, DORA, EBA guidelines, PSD2 — with experience building BCBS 239-aligned data pipelines and governance structures. Recognised for bridging business and technology, leading cross-functional teams of 15+, and engaging C-suite and regulatory stakeholders. Open to relocation to Ireland, Netherlands, Germany or wider EU/EEA.</p>
                     <div class="about-gif-row">
                         <img src="https://media.giphy.com/media/f3iwJFOVOwuy7K6FFw/giphy.gif"
                              alt="AI and machine learning visualization"
@@ -179,9 +179,123 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// EU Value Strip Data
+const euValueStats = [
+    { number: '14+', label: 'Years Banking & Fintech' },
+    { number: '$10M+', label: 'Cumulative Value Delivered' },
+    { number: '6', label: 'EU Regulatory Frameworks' },
+    { number: '3', label: 'Global Markets Covered' }
+];
+
+// EU Regulatory Framework Data
+const regulatoryData = [
+    {
+        icon: '🏛️',
+        title: 'Basel III / IV',
+        desc: 'Capital adequacy, credit risk RWA computation, ICAAP/ILAAP frameworks and stress testing under EBA guidelines.',
+        tags: ['Credit RWA', 'ICAAP', 'ILAAP', 'Stress Testing']
+    },
+    {
+        icon: '📊',
+        title: 'BCBS 239',
+        desc: 'Risk data aggregation and reporting principles — data lineage, accuracy, completeness and timeliness for board-level risk reporting.',
+        tags: ['Data Lineage', 'Risk Reporting', 'Data Quality', 'Governance']
+    },
+    {
+        icon: '🔐',
+        title: 'GDPR & Data Privacy',
+        desc: 'Privacy-by-design ML models, data minimisation in credit decisioning, consent management in alternate-data pipelines.',
+        tags: ['Privacy by Design', 'Data Minimisation', 'Consent Mgmt']
+    },
+    {
+        icon: '⚡',
+        title: 'DORA',
+        desc: 'Digital Operational Resilience Act — ICT risk frameworks, third-party risk management and incident reporting for EU financial entities.',
+        tags: ['ICT Risk', 'Incident Reporting', 'Third-Party Risk']
+    },
+    {
+        icon: '📋',
+        title: 'EBA Guidelines',
+        desc: 'EBA GL on credit granting and monitoring, loan origination standards, creditworthiness assessment and NPL management.',
+        tags: ['Credit Granting', 'NPL Mgmt', 'Loan Origination']
+    },
+    {
+        icon: '💳',
+        title: 'PSD2 / Open Banking',
+        desc: 'Account Aggregator equivalent experience; alternate data from open banking APIs for credit decisioning and fraud detection.',
+        tags: ['Open Banking', 'API Integration', 'Alt Data', 'Fraud Detection']
+    }
+];
+
+function renderEUValueStrip() {
+    const section = document.getElementById('eu-strip');
+    if (!section) return;
+    section.innerHTML = `
+        <div class="container">
+            <div class="eu-value-grid">
+                ${euValueStats.map(s => `
+                    <div class="eu-value-item">
+                        <div class="eu-value-number">${s.number}</div>
+                        <div class="eu-value-label">${s.label}</div>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    `;
+}
+
+function renderRegulatory() {
+    const grid = document.getElementById('regulatory-grid');
+    if (!grid) return;
+    grid.innerHTML = regulatoryData.map(r => `
+        <div class="regulatory-card">
+            <div class="regulatory-card-icon">${r.icon}</div>
+            <div class="regulatory-card-title">${r.title}</div>
+            <div class="regulatory-card-desc">${r.desc}</div>
+            <div class="regulatory-card-tags">
+                ${r.tags.map(t => `<span class="reg-tag">${t}</span>`).join('')}
+            </div>
+        </div>
+    `).join('');
+}
+
+function renderOpportunity() {
+    const content = document.getElementById('opportunity-content');
+    if (!content) return;
+    content.innerHTML = `
+        <div class="opportunity-inner">
+            <div class="availability-badge" style="margin: 0 auto 1.5rem; width: fit-content; color: #2ec4b6;">
+                <span class="pulse-dot"></span>
+                Available Now — Target Start: Q1 2025
+            </div>
+            <div class="opportunity-divider"></div>
+            <h2 class="opportunity-title">Ready to Lead Risk Analytics in Europe</h2>
+            <p class="opportunity-subtitle">
+                14+ years of enterprise risk analytics leadership across retail banking, fintech and consulting —
+                credit risk, fraud detection and AI/ML deployment. Seeking a senior role where I can build,
+                transform and deliver measurable impact for a European financial institution.
+            </p>
+            <div class="opportunity-locations">
+                <span class="location-chip">🇮🇪 Ireland</span>
+                <span class="location-chip">🇳🇱 Netherlands</span>
+                <span class="location-chip">🇩🇪 Germany</span>
+                <span class="location-chip">🇫🇷 France</span>
+                <span class="location-chip">🇪🇺 EU / EEA</span>
+            </div>
+            <div class="opportunity-btns">
+                <a href="mailto:aceakant@gmail.com" class="btn-eu-primary">📧 aceakant@gmail.com</a>
+                <a href="https://linkedin.com/in/ajuhack" target="_blank" class="btn-eu-secondary">💼 LinkedIn Profile</a>
+            </div>
+        </div>
+    `;
+}
+
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
     loadProjects();
     updateAbout();
     updateContact();
+    renderEUValueStrip();
+    renderRegulatory();
+    renderOpportunity();
 });
