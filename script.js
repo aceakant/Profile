@@ -227,10 +227,11 @@ function openArticle(id, articles) {
             <span class="article-date">${formatArticleDate(article.date)}</span>
             <span class="article-read-time">${article.readTime}</span>
         </div>
+        ${article.image ? `<img src="${article.image}" alt="${article.title}" style="width:100%;border-radius:10px;margin:1.25rem 0;object-fit:cover;max-height:320px;">` : ''}
         <div class="article-body">${renderArticleContent(article)}</div>
-        <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(102,126,234,0.15);font-size:0.85rem;color:#79747e;">
-            — <strong>Ajay Kant</strong> &nbsp;·&nbsp; aceakant@gmail.com &nbsp;·&nbsp;
-            <a href="https://linkedin.com/in/ajuhack" target="_blank" style="color:#667eea;">LinkedIn</a>
+        <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(201,164,76,0.15);font-size:0.85rem;color:#8896ab;">
+            — <strong style="color:#e2e8f0;">Ajay Kant</strong> &nbsp;·&nbsp; aceakant@gmail.com &nbsp;·&nbsp;
+            <a href="https://linkedin.com/in/ajuhack" target="_blank" style="color:#c9a44c;">LinkedIn</a>
         </div>
     `;
     modal.hidden = false;
@@ -244,6 +245,28 @@ function closeArticle() {
 
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
 
+function articleCardHTML(article, allArticles) {
+    const articlesJson = JSON.stringify(allArticles).replace(/'/g, "&#39;");
+    return `
+        <div class="article-card" onclick="openArticle('${article.id}', ${articlesJson})">
+            ${article.image ? `<div class="article-card-img" style="background-image:url('${article.image}')"></div>` : '<div class="article-card-accent"></div>'}
+            <div class="article-card-body">
+                <div class="article-meta">
+                    <span class="article-category">${article.category}</span>
+                    <span class="article-date">${formatArticleDate(article.date)}</span>
+                    <span class="article-read-time">${article.readTime}</span>
+                </div>
+                <h3 class="article-title">${article.title}</h3>
+                <p class="article-summary">${article.summary}</p>
+                <div class="article-tags">
+                    ${article.tags.map(t => `<span class="article-tag">#${t}</span>`).join('')}
+                </div>
+                <span class="article-cta">Read article →</span>
+            </div>
+        </div>
+    `;
+}
+
 async function loadArticles() {
     const grid = document.getElementById('articles-grid');
     if (!grid) return;
@@ -251,26 +274,22 @@ async function loadArticles() {
         const res = await fetch('articles/data.json');
         const data = await res.json();
         const articles = data.articles.sort((a, b) => new Date(b.date) - new Date(a.date));
-        grid.innerHTML = articles.map(article => `
-            <div class="article-card" onclick="openArticle('${article.id}', ${JSON.stringify(articles).replace(/'/g, "&#39;")})">
-                <div class="article-card-accent"></div>
-                <div class="article-card-body">
-                    <div class="article-meta">
-                        <span class="article-category">${article.category}</span>
-                        <span class="article-date">${formatArticleDate(article.date)}</span>
-                        <span class="article-read-time">${article.readTime}</span>
-                    </div>
-                    <h3 class="article-title">${article.title}</h3>
-                    <p class="article-summary">${article.summary}</p>
-                    <div class="article-tags">
-                        ${article.tags.map(t => `<span class="article-tag">#${t}</span>`).join('')}
-                    </div>
-                    <span class="article-cta">Read article →</span>
-                </div>
-            </div>
-        `).join('');
+        grid.innerHTML = articles.map(a => articleCardHTML(a, articles)).join('');
     } catch (e) {
         grid.innerHTML = '<div class="articles-loading">Articles coming soon…</div>';
+    }
+}
+
+async function loadTeaserArticles() {
+    const container = document.getElementById('teaser-articles');
+    if (!container) return;
+    try {
+        const res = await fetch('articles/data.json');
+        const data = await res.json();
+        const articles = data.articles.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 2);
+        container.innerHTML = articles.map(a => articleCardHTML(a, data.articles.sort((x, y) => new Date(y.date) - new Date(x.date)))).join('');
+    } catch (e) {
+        container.innerHTML = '';
     }
 }
 
@@ -403,4 +422,5 @@ document.addEventListener('DOMContentLoaded', function() {
     renderRegulatory();
     renderOpportunity();
     loadArticles();
+    loadTeaserArticles();
 });

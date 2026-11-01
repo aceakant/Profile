@@ -1,24 +1,25 @@
-// M3-aligned Chart.js global defaults
-Chart.defaults.font.family = "'Roboto', 'Segoe UI', sans-serif";
+// Chart.js global defaults — dark executive theme
+Chart.defaults.font.family = "'Inter', 'Segoe UI', sans-serif";
 Chart.defaults.font.size = 12;
-Chart.defaults.color = '#49454f';
+Chart.defaults.color = '#8896ab';
 Chart.defaults.plugins.legend.position = 'bottom';
 Chart.defaults.plugins.legend.labels.padding = 16;
 Chart.defaults.plugins.legend.labels.usePointStyle = true;
 Chart.defaults.plugins.legend.labels.pointStyleWidth = 10;
+Chart.defaults.plugins.legend.labels.color = '#8896ab';
 Chart.defaults.elements.arc.borderWidth = 0;
 Chart.defaults.animation.duration = 900;
 Chart.defaults.animation.easing = 'easeInOutQuart';
 
 const M3_PALETTE = {
-    primary:   '#667eea',
-    secondary: '#764ba2',
-    tertiary:  '#9c6fce',
-    accent1:   '#4a90d9',
-    accent2:   '#2ec4b6',
-    warn:      '#f4a261',
-    danger:    '#e63946',
-    series: ['#667eea', '#764ba2', '#9c6fce', '#4a90d9', '#2ec4b6', '#f4a261', '#e63946']
+    primary:   '#c9a44c',
+    secondary: '#4b8cc8',
+    tertiary:  '#2dc9b5',
+    accent1:   '#e8c96a',
+    accent2:   '#2dc9b5',
+    warn:      '#e8a23a',
+    danger:    '#e05252',
+    series: ['#c9a44c', '#4b8cc8', '#2dc9b5', '#e8c96a', '#9b7fd4', '#e8a23a', '#e05252']
 };
 
 // Inline center-text plugin for doughnut charts
@@ -28,8 +29,8 @@ const centerTextPlugin = {
         if (chart.config.type !== 'doughnut') return;
         const { ctx, chartArea: { width, height, top } } = chart;
         ctx.save();
-        ctx.font = 'bold 13px Roboto, sans-serif';
-        ctx.fillStyle = '#1c1b1f';
+        ctx.font = 'bold 13px Inter, sans-serif';
+        ctx.fillStyle = '#e2e8f0';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         const centerY = top + height / 2;
@@ -67,10 +68,10 @@ function initRadarChart() {
             scales: {
                 r: {
                     min: 0, max: 100,
-                    ticks: { stepSize: 20, backdropColor: 'transparent', color: '#79747e', font: { size: 10 } },
-                    grid: { color: 'rgba(118,75,162,0.15)' },
-                    angleLines: { color: 'rgba(118,75,162,0.15)' },
-                    pointLabels: { font: { size: 11, weight: '500' }, color: '#1c1b1f' }
+                    ticks: { stepSize: 20, backdropColor: 'transparent', color: '#8896ab', font: { size: 10 } },
+                    grid: { color: 'rgba(201,164,76,0.12)' },
+                    angleLines: { color: 'rgba(201,164,76,0.12)' },
+                    pointLabels: { font: { size: 11, weight: '500' }, color: '#e2e8f0' }
                 }
             }
         }
@@ -112,10 +113,10 @@ function initSkillsBarChart() {
             scales: {
                 x: {
                     max: 100,
-                    grid: { color: 'rgba(0,0,0,0.06)' },
-                    ticks: { callback: v => v + '%' }
+                    grid: { color: 'rgba(255,255,255,0.06)' },
+                    ticks: { callback: v => v + '%', color: '#8896ab' }
                 },
-                y: { grid: { display: false } }
+                y: { grid: { display: false }, ticks: { color: '#e2e8f0' } }
             }
         }
     });
@@ -165,8 +166,8 @@ function initPlatformPolar() {
             scales: {
                 r: {
                     ticks: { display: false },
-                    grid: { color: 'rgba(118,75,162,0.15)', circular: true },
-                    angleLines: { color: 'rgba(118,75,162,0.15)' }
+                    grid: { color: 'rgba(201,164,76,0.12)', circular: true },
+                    angleLines: { color: 'rgba(201,164,76,0.12)' }
                 }
             },
             plugins: { legend: { labels: { font: { size: 11 } } } }
@@ -228,8 +229,8 @@ function initImpactBar() {
                 }
             },
             scales: {
-                x: { grid: { display: false } },
-                y: { grid: { color: 'rgba(0,0,0,0.06)' }, beginAtZero: true }
+                x: { grid: { display: false }, ticks: { color: '#8896ab' } },
+                y: { grid: { color: 'rgba(255,255,255,0.06)' }, beginAtZero: true, ticks: { color: '#8896ab' } }
             }
         }
     });

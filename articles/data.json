@@ -8,6 +8,7 @@
       "tags": ["GenAI", "LLMs", "Risk Management", "Team Building"],
       "summary": "How I introduced LLM-powered agents into fraud risk analytics — and what every risk leader considering GenAI should know before they start.",
       "readTime": "6 min read",
+      "image": "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80",
       "content": [
         "When I joined L&T Finance in December 2023, Generative AI was everywhere in the news — but almost nowhere in regulated financial services. The compliance teams were nervous, the CRO had questions, and the data scientists were excited. Sound familiar?",
         "Over the next twelve months, I led the introduction of two LLM-based tools into our fraud and operations workflow. Here are the three things I wish I had known at the start.",
@@ -32,6 +33,7 @@
       "tags": ["Alternate Data", "Credit Scoring", "Open Banking", "Fintech"],
       "summary": "Satellite farmland imagery, real-time UPI payments, telecom signals — the alternate data revolution in India offers a blueprint for European thin-file lending.",
       "readTime": "7 min read",
+      "image": "https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=800&q=80",
       "content": [
         "India has 1.4 billion people. The formal credit bureau covers roughly 300 million of them. The remaining billion — farmers, gig workers, micro-entrepreneurs, first-time borrowers — are invisible to traditional credit models.",
         "At Axis Bank, I led the programme that built 8 production data products to reach those customers. What we built in India is directly relevant to the thin-file challenge European lenders face under PSD2 and the Account Aggregator framework.",

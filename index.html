@@ -3,263 +3,270 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AJAY KANT - Head of Risk Analytics | Professional Portfolio & Weather Dashboard">
-    <title>AJAY KANT - Portfolio & Weather Dashboard</title>
+    <meta name="description" content="Ajay Kant — Risk, Fraud & AI Analytics Leader. Building analytics teams for European financial institutions.">
+    <title>Ajay Kant — Risk, Fraud & AI Analytics Leader</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <h1>AJAY KANT</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#timeline">Timeline</a></li>
-                <li><a href="#weather">Weather</a></li>
-                <li><a href="#showcase">Showcase</a></li>
-                <li><a href="#articles">Articles</a></li>
-                <li><a href="#eu-regulatory">EU Expertise</a></li>
-                <li><a href="#opportunity" class="nav-cta">Hire Me</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-gif-overlay" aria-hidden="true">
-            <img src="https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif"
-                 alt="" class="hero-bg-gif" loading="eager" onerror="this.style.display='none'"/>
-        </div>
-        <div class="hero-content">
-            <h1>AJAY KANT</h1>
-            <p class="hero-subtitle">Risk, Fraud &amp; AI Analytics Leader | Credit Strategy | GenAI &amp; ML-Driven Decisioning</p>
-            <p>14+ years across retail banking, fintech &amp; consulting — India, US, Australia. 3 teams built from scratch.</p>
-            <div class="hero-stats">
-                <div class="stat">
-                    <div class="stat-number">$10M</div>
-                    <div class="stat-label">Annual Fraud-Loss Reduction</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">+25%</div>
-                    <div class="stat-label">Acquisition Efficiency</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">3</div>
-                    <div class="stat-label">Teams Built from Scratch</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">−15%</div>
-                    <div class="stat-label">Digital Fraud Exposure</div>
-                </div>
-            </div>
-            <div class="availability-badge">
-                <span class="pulse-dot"></span>
-                Actively Seeking EU Opportunities — Ireland · Netherlands · Germany · Denmark
-            </div>
-            <a href="#portfolio" class="btn btn-primary">View My Work</a>
-        </div>
-    </section>
+<!-- ── Navigation ─────────────────────────────────────────── -->
+<nav class="navbar">
+    <div class="nav-inner">
+        <a href="index.html" class="nav-logo">AK<span class="nav-logo-dot">.</span></a>
+        <ul class="nav-links">
+            <li><a href="#engagements">Work</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#timeline">Journey</a></li>
+            <li><a href="#eu-regulatory">EU Expertise</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="#opportunity" class="nav-hire">Available →</a></li>
+        </ul>
+        <button class="nav-menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+    </div>
+</nav>
 
-    <!-- Work Showcase (Videos) -->
-    <section id="showcase" class="showcase-section">
-        <div class="container">
-            <h2 class="m3-section-title">Work Showcase</h2>
-            <p class="section-subtitle">Presentations from L&T Finance Risk Control Unit — fraud analytics & ML-driven decisioning</p>
-            <div class="video-grid">
-                <div class="video-card">
-                    <div class="video-wrapper">
-                        <video controls preload="metadata" class="showcase-video"
-                               poster="">
-                            <source src="videos/rcu-analytics-cinematic.mp4" type="video/mp4">
-                        </video>
+<!-- ── Hero ───────────────────────────────────────────────── -->
+<section id="home" class="hero">
+    <div class="container">
+        <div class="hero-grid">
+            <div class="hero-left">
+                <div class="hero-eyebrow">Risk · Fraud · AI Analytics</div>
+                <h1 class="hero-name">Ajay<br>Kant<span class="hero-dot">.</span></h1>
+                <p class="hero-tagline">I build analytics teams that turn data into better lending and fraud decisions. Three teams. Three organisations. $10M+ in measurable results.</p>
+                <div class="avail-chip">
+                    <span class="pulse-ring"></span>
+                    <span class="pulse-core"></span>
+                    Open to EU opportunities — Ireland · Netherlands · Germany · Denmark
+                </div>
+                <div class="hero-actions">
+                    <a href="mailto:aceakant@gmail.com" class="btn-gold">Start a conversation</a>
+                    <a href="articles.html" class="btn-ghost">Read my articles →</a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="metric-grid">
+                    <div class="metric-card">
+                        <div class="metric-num">$10M</div>
+                        <div class="metric-label">Annual fraud-loss reduction</div>
                     </div>
-                    <div class="video-card-body">
-                        <span class="video-tag">Risk Control Unit · L&T Finance</span>
-                        <h3 class="video-title">RCU Analytics — Cinematic Overview</h3>
-                        <p class="video-desc">Enterprise fraud risk analytics build-out: data-mart, ML models, Early-Warning System and GenAI integration across India's largest NBFC retail book.</p>
+                    <div class="metric-card">
+                        <div class="metric-num">+25%</div>
+                        <div class="metric-label">Acquisition efficiency</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-num">3</div>
+                        <div class="metric-label">Teams built from scratch</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-num">−15%</div>
+                        <div class="metric-label">Digital fraud exposure</div>
                     </div>
                 </div>
-                <div class="video-card">
-                    <div class="video-wrapper">
-                        <video controls preload="metadata" class="showcase-video">
-                            <source src="videos/rcu-guardian.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="video-card-body">
-                        <span class="video-tag">Risk Control Unit · L&T Finance</span>
-                        <h3 class="video-title">RCU Guardian — Fraud Defence Framework</h3>
-                        <p class="video-desc">Deep-dive into the RCU Guardian framework: fraud-rule engine, scorecard ensemble, field-sales risk controls and CRO-level governance dashboards.</p>
-                    </div>
-                </div>
+                <div class="hero-tools">Python · SAS · GCP · Azure · LLMs · Tableau · SQL · Power BI</div>
             </div>
-        </div>
-    </section>
-
-    <!-- Articles Section -->
-    <section id="articles" class="articles-section">
-        <div class="container">
-            <div class="articles-header">
-                <div>
-                    <h2 class="m3-section-title" style="margin-bottom:0.5rem;">Insights &amp; Articles</h2>
-                    <p class="section-subtitle" style="margin-top:0;">Weekly perspectives on risk analytics, fraud detection and AI in financial services</p>
-                </div>
-                <span class="articles-freq-badge">📅 Weekly</span>
-            </div>
-            <div class="articles-grid" id="articles-grid">
-                <div class="articles-loading">Loading articles…</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Article Reader Modal -->
-    <div class="article-modal" id="article-modal" hidden>
-        <div class="article-modal-overlay" onclick="closeArticle()"></div>
-        <div class="article-modal-panel" id="article-modal-panel">
-            <button class="article-modal-close" onclick="closeArticle()">✕</button>
-            <div class="article-modal-content" id="article-modal-content"></div>
         </div>
     </div>
+    <div class="hero-scroll-hint">↓</div>
+</section>
 
-    <!-- EU Value Strip -->
-    <section class="eu-value-section" id="eu-strip"></section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio-section">
-        <div class="container">
-            <h2 class="m3-section-title">Flagship Projects</h2>
-            <div class="projects-grid" id="projects-grid"></div>
-        </div>
-    </section>
-
-    <!-- Skills Visualization Section -->
-    <section id="skills" class="skills-section">
-        <div class="container">
-            <h2 class="m3-section-title">Skills &amp; Expertise</h2>
-            <p class="section-subtitle">Python · SAS (Base/EG/E-Miner/Viya) · SQL · Teradata · GCP · Azure · AWS · Tableau · Power BI · Looker · LLMs / GenAI</p>
-            <div class="skills-gif-accent">
-                <img src="https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif"
-                     alt="Data analytics in action" class="section-gif" loading="lazy"
-                     onerror="this.style.display='none'"/>
+<!-- ── Problems I Solve ───────────────────────────────────── -->
+<section class="problems-section">
+    <div class="container">
+        <div class="section-label">What I do</div>
+        <h2 class="section-title">The problems I solve</h2>
+        <div class="problems-grid">
+            <div class="problem-card">
+                <div class="problem-num">01</div>
+                <div class="problem-icon">🔍</div>
+                <h3>Fraud slips through too slowly</h3>
+                <p>By the time fraud is detected, the loss is already booked. I build ML early-warning systems and GenAI analytics agents that catch fraud before it crystallises — with GDPR-compliant controls built in.</p>
+                <div class="problem-proof">+20% early detection · L&T Finance</div>
             </div>
-            <div class="skills-charts-grid">
-                <div class="m3-card chart-card">
-                    <h3 class="chart-title">Core Competencies</h3>
-                    <div class="chart-wrapper"><canvas id="radarChart"></canvas></div>
-                </div>
-                <div class="m3-card chart-card">
-                    <h3 class="chart-title">Technical Proficiency</h3>
-                    <div class="chart-wrapper"><canvas id="skillsBarChart"></canvas></div>
-                </div>
-                <div class="m3-card chart-card">
-                    <h3 class="chart-title">Domain Expertise</h3>
-                    <div class="chart-wrapper"><canvas id="domainDoughnutChart"></canvas></div>
-                </div>
-                <div class="m3-card chart-card">
-                    <h3 class="chart-title">Platform Coverage</h3>
-                    <div class="chart-wrapper"><canvas id="platformPolarChart"></canvas></div>
-                </div>
+            <div class="problem-card">
+                <div class="problem-num">02</div>
+                <div class="problem-icon">📊</div>
+                <h3>Credit bureaus miss half the market</h3>
+                <p>Traditional scorecards reject good customers because the bureau doesn't know them. I build alternate-data models — open banking, payments, satellite, telecom — that reach the invisible borrower.</p>
+                <div class="problem-proof">+25% acquisition · −20% risk · Axis Bank</div>
+            </div>
+            <div class="problem-card">
+                <div class="problem-num">03</div>
+                <div class="problem-icon">🏗️</div>
+                <h3>Risk analytics functions take too long to build</h3>
+                <p>Banks restart from zero every time: data-mart, models, dashboards, governance, team. I've done it three times and know the fastest path from nothing to CRO-ready analytics capability.</p>
+                <div class="problem-proof">3 functions built · 15 people · avg 6 months to production</div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- EU Regulatory Expertise Section -->
-    <section id="eu-regulatory" class="eu-regulatory-section">
-        <div class="container">
-            <h2 class="m3-section-title">EU Regulatory Expertise</h2>
-            <p class="section-subtitle">Deep knowledge of the European financial services regulatory landscape — ready to contribute from day one</p>
-            <div class="regulatory-grid" id="regulatory-grid"></div>
-        </div>
-    </section>
+<!-- ── Selected Engagements ───────────────────────────────── -->
+<section id="engagements" class="engagements-section">
+    <div class="container">
+        <div class="section-label">Selected work</div>
+        <h2 class="section-title">Flagship engagements</h2>
+        <div class="projects-grid" id="projects-grid"></div>
+    </div>
+</section>
 
-    <!-- Experience Timeline Section -->
-    <section id="timeline" class="timeline-section">
-        <div class="container">
-            <h2 class="m3-section-title">Career Journey</h2>
-            <p class="section-subtitle">14+ years building risk analytics capabilities across continents</p>
-            <div class="timeline-gif-accent">
-                <img src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyc/giphy.gif"
-                     alt="Career growth visualization" class="section-gif" loading="lazy"
-                     onerror="this.style.display='none'"/>
+<!-- ── Skills & Charts ────────────────────────────────────── -->
+<section id="skills" class="skills-section">
+    <div class="container">
+        <div class="section-label">Capabilities</div>
+        <h2 class="section-title">Skills &amp; expertise</h2>
+        <p class="section-sub">Python · SAS (Base / EG / E-Miner / Viya) · SQL · Teradata · GCP · Azure · AWS · Tableau · Power BI · Looker · LLMs / GenAI</p>
+        <div class="skills-charts-grid">
+            <div class="chart-card">
+                <h3 class="chart-title">Core Competencies</h3>
+                <div class="chart-wrapper"><canvas id="radarChart"></canvas></div>
             </div>
-            <div class="m3-card timeline-impact-card">
-                <h3 class="chart-title">Quantified Impact Across Roles</h3>
-                <div class="chart-wrapper chart-wrapper--wide"><canvas id="impactBarChart"></canvas></div>
+            <div class="chart-card">
+                <h3 class="chart-title">Technical Proficiency</h3>
+                <div class="chart-wrapper"><canvas id="skillsBarChart"></canvas></div>
             </div>
-            <div class="timeline-track" id="timeline-track"></div>
-        </div>
-    </section>
-
-    <!-- Weather Dashboard Section -->
-    <section id="weather" class="weather-section">
-        <div class="container">
-            <h2 class="m3-section-title">Weather Dashboard</h2>
-            <div class="weather-container">
-                <!-- Search Box -->
-                <div class="search-box">
-                    <input type="text" id="searchInput" placeholder="Search for a city..." />
-                    <button id="searchBtn"><i class="fas fa-search"></i></button>
-                </div>
-
-                <!-- Loading Spinner -->
-                <div id="loadingSpinner" class="loading-spinner" style="display: none;">
-                    <i class="fas fa-spinner fa-spin"></i>
-                </div>
-
-                <!-- Error Message -->
-                <div id="errorMessage" class="error-message" style="display: none;"></div>
-
-                <!-- Current Weather -->
-                <div id="currentWeather" class="current-weather"></div>
-
-                <!-- 5-Day Forecast -->
-                <div id="forecastSection" class="forecast-section" style="display: none;">
-                    <h3>5-Day Forecast</h3>
-                    <div class="forecast-grid" id="forecastGrid"></div>
-                </div>
-
-                <!-- Hourly Forecast -->
-                <div id="hourlySection" class="hourly-section" style="display: none;">
-                    <h3>24-Hour Forecast</h3>
-                    <div class="hourly-scroll" id="hourlyScroll"></div>
-                </div>
-
-                <!-- Additional Info -->
-                <div id="additionalInfo" class="additional-info" style="display: none;"></div>
+            <div class="chart-card">
+                <h3 class="chart-title">Domain Expertise</h3>
+                <div class="chart-wrapper"><canvas id="domainDoughnutChart"></canvas></div>
+            </div>
+            <div class="chart-card">
+                <h3 class="chart-title">Platform Coverage</h3>
+                <div class="chart-wrapper"><canvas id="platformPolarChart"></canvas></div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Open to Opportunities -->
-    <section id="opportunity" class="opportunity-section">
-        <div class="container">
-            <div id="opportunity-content"></div>
+<!-- ── Career Timeline ────────────────────────────────────── -->
+<section id="timeline" class="timeline-section">
+    <div class="container">
+        <div class="section-label">14+ years</div>
+        <h2 class="section-title">Career journey</h2>
+        <p class="section-sub">India · United States · Australia</p>
+        <div class="chart-card chart-wide">
+            <h3 class="chart-title">Quantified impact across roles</h3>
+            <div class="chart-wrapper chart-wrapper--wide"><canvas id="impactBarChart"></canvas></div>
         </div>
-    </section>
+        <div class="timeline-track" id="timeline-track"></div>
+    </div>
+</section>
 
-    <!-- About Section -->
-    <section id="about" class="about"></section>
+<!-- ── EU Regulatory Expertise ────────────────────────────── -->
+<section id="eu-regulatory" class="eu-regulatory-section">
+    <div class="container">
+        <div class="section-label">EU ready</div>
+        <h2 class="section-title">EU regulatory expertise</h2>
+        <p class="section-sub">Deep knowledge of the European financial services regulatory landscape — ready to contribute from day one</p>
+        <div class="regulatory-grid" id="regulatory-grid"></div>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact"></section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 AJAY KANT. Risk, Fraud &amp; AI Analytics Leader.</p>
-            <p style="font-size:0.8rem;opacity:0.7;margin-top:0.4rem;">BSc, University of Delhi (2009) &nbsp;·&nbsp; SAS Base Certified &nbsp;·&nbsp; GenAI on Google Cloud (2023) &nbsp;·&nbsp; Speaker, Monnai 2024</p>
-            <p style="font-size:0.8rem;opacity:0.7;margin-top:0.25rem;">Relocating to Ireland · Netherlands · Germany · Denmark &nbsp;|&nbsp; aceakant@gmail.com &nbsp;|&nbsp; linkedin.com/in/ajuhack</p>
+<!-- ── Articles Teaser ────────────────────────────────────── -->
+<section class="articles-teaser">
+    <div class="container">
+        <div class="teaser-inner">
+            <div class="teaser-left">
+                <div class="section-label">Published weekly</div>
+                <h2 class="section-title" style="margin-bottom:1rem;">Insights on risk,<br>fraud &amp; AI</h2>
+                <p style="color:var(--text-muted);line-height:1.7;max-width:420px;">Every week I write about the intersection of analytics, fraud, credit risk and AI in financial services — problems I've seen, solutions that worked, and what European banks need to know.</p>
+                <a href="articles.html" class="btn-gold" style="margin-top:1.75rem;display:inline-block;">Browse all articles →</a>
+            </div>
+            <div class="teaser-right" id="teaser-articles"></div>
         </div>
-    </footer>
+    </div>
+</section>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-    <script src="visualizations.js"></script>
-    <script src="script.js"></script>
-    <script src="weather.js"></script>
+<!-- ── EU Value Strip ─────────────────────────────────────── -->
+<div class="eu-value-section" id="eu-strip"></div>
+
+<!-- ── Opportunity CTA ────────────────────────────────────── -->
+<section id="opportunity" class="opportunity-section">
+    <div class="container">
+        <div id="opportunity-content"></div>
+    </div>
+</section>
+
+<!-- ── About ──────────────────────────────────────────────── -->
+<section id="about" class="about"></section>
+
+<!-- ── Weather ───────────────────────────────────────────── -->
+<section id="weather" class="weather-section">
+    <div class="container">
+        <div class="section-label">Live tool</div>
+        <h2 class="section-title">Weather dashboard</h2>
+        <div class="weather-container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search for a city…" />
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+            <div id="loadingSpinner" class="loading-spinner" style="display:none;"><i class="fas fa-spinner fa-spin"></i></div>
+            <div id="errorMessage" class="error-message" style="display:none;"></div>
+            <div id="currentWeather" class="current-weather"></div>
+            <div id="forecastSection" class="forecast-section" style="display:none;">
+                <h3>5-Day Forecast</h3>
+                <div class="forecast-grid" id="forecastGrid"></div>
+            </div>
+            <div id="hourlySection" class="hourly-section" style="display:none;">
+                <h3>24-Hour Forecast</h3>
+                <div class="hourly-scroll" id="hourlyScroll"></div>
+            </div>
+            <div id="additionalInfo" class="additional-info" style="display:none;"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ── Contact ────────────────────────────────────────────── -->
+<section id="contact" class="contact"></section>
+
+<!-- ── Footer ────────────────────────────────────────────── -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-logo">AK<span style="color:var(--gold)">.</span></div>
+                <p class="footer-tagline">Risk, Fraud & AI Analytics Leader</p>
+                <p class="footer-creds">BSc, University of Delhi (2009) · SAS Base Certified · GenAI on Google Cloud (2023) · Speaker, Monnai 2024</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <div class="footer-col-title">Navigation</div>
+                    <a href="#engagements">Work</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#timeline">Journey</a>
+                    <a href="articles.html">Articles</a>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-col-title">Contact</div>
+                    <a href="mailto:aceakant@gmail.com">aceakant@gmail.com</a>
+                    <a href="tel:+919769984956">+91 97699 84956</a>
+                    <a href="https://linkedin.com/in/ajuhack" target="_blank">LinkedIn</a>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-col-title">Relocating to</div>
+                    <span>🇮🇪 Ireland</span>
+                    <span>🇳🇱 Netherlands</span>
+                    <span>🇩🇪 Germany</span>
+                    <span>🇩🇰 Denmark</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 Ajay Kant · English (fluent) · Hindi (native) · Available for video interviews at any time</div>
+    </div>
+</footer>
+
+<!-- Article Modal -->
+<div class="article-modal" id="article-modal" hidden>
+    <div class="article-modal-overlay" onclick="closeArticle()"></div>
+    <div class="article-modal-panel" id="article-modal-panel">
+        <button class="article-modal-close" onclick="closeArticle()">✕</button>
+        <div class="article-modal-content" id="article-modal-content"></div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="visualizations.js"></script>
+<script src="script.js"></script>
+<script src="weather.js"></script>
 </body>
 </html>
