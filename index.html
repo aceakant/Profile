@@ -22,6 +22,8 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#timeline">Timeline</a></li>
                 <li><a href="#weather">Weather</a></li>
+                <li><a href="#showcase">Showcase</a></li>
+                <li><a href="#articles">Articles</a></li>
                 <li><a href="#eu-regulatory">EU Expertise</a></li>
                 <li><a href="#opportunity" class="nav-cta">Hire Me</a></li>
             </ul>
@@ -63,6 +65,66 @@
             <a href="#portfolio" class="btn btn-primary">View My Work</a>
         </div>
     </section>
+
+    <!-- Work Showcase (Videos) -->
+    <section id="showcase" class="showcase-section">
+        <div class="container">
+            <h2 class="m3-section-title">Work Showcase</h2>
+            <p class="section-subtitle">Presentations from L&T Finance Risk Control Unit — fraud analytics & ML-driven decisioning</p>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video controls preload="metadata" class="showcase-video"
+                               poster="">
+                            <source src="videos/rcu-analytics-cinematic.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-card-body">
+                        <span class="video-tag">Risk Control Unit · L&T Finance</span>
+                        <h3 class="video-title">RCU Analytics — Cinematic Overview</h3>
+                        <p class="video-desc">Enterprise fraud risk analytics build-out: data-mart, ML models, Early-Warning System and GenAI integration across India's largest NBFC retail book.</p>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video controls preload="metadata" class="showcase-video">
+                            <source src="videos/rcu-guardian.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="video-card-body">
+                        <span class="video-tag">Risk Control Unit · L&T Finance</span>
+                        <h3 class="video-title">RCU Guardian — Fraud Defence Framework</h3>
+                        <p class="video-desc">Deep-dive into the RCU Guardian framework: fraud-rule engine, scorecard ensemble, field-sales risk controls and CRO-level governance dashboards.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section id="articles" class="articles-section">
+        <div class="container">
+            <div class="articles-header">
+                <div>
+                    <h2 class="m3-section-title" style="margin-bottom:0.5rem;">Insights &amp; Articles</h2>
+                    <p class="section-subtitle" style="margin-top:0;">Weekly perspectives on risk analytics, fraud detection and AI in financial services</p>
+                </div>
+                <span class="articles-freq-badge">📅 Weekly</span>
+            </div>
+            <div class="articles-grid" id="articles-grid">
+                <div class="articles-loading">Loading articles…</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Reader Modal -->
+    <div class="article-modal" id="article-modal" hidden>
+        <div class="article-modal-overlay" onclick="closeArticle()"></div>
+        <div class="article-modal-panel" id="article-modal-panel">
+            <button class="article-modal-close" onclick="closeArticle()">✕</button>
+            <div class="article-modal-content" id="article-modal-content"></div>
+        </div>
+    </div>
 
     <!-- EU Value Strip -->
     <section class="eu-value-section" id="eu-strip"></section>

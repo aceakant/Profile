@@ -183,6 +183,97 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// ── Articles System ──────────────────────────────────────────────────────────
+// AUTOMATION PIPELINE: The Content Creator Claude project can publish a new
+// article by adding an entry to articles/data.json via the GitHub MCP tool
+// (mcp__github__create_or_update_file), then pushing the file. GitHub Pages
+// redeploys automatically within ~60 seconds. No other coordination needed.
+//
+// Article entry format:
+// {
+//   "id": "unique-slug",
+//   "title": "Article Title",
+//   "date": "YYYY-MM-DD",
+//   "category": "Category Name",
+//   "tags": ["Tag1", "Tag2"],
+//   "summary": "One-paragraph teaser shown on the card.",
+//   "readTime": "X min read",
+//   "content": ["Paragraph 1", "## Heading", "Paragraph 2", ...]
+// }
+// ─────────────────────────────────────────────────────────────────────────────
+
+function formatArticleDate(dateStr) {
+    const d = new Date(dateStr + 'T00:00:00');
+    return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+
+function renderArticleContent(article) {
+    return article.content.map(block => {
+        if (block.startsWith('## ')) return `<h2>${block.slice(3)}</h2>`;
+        if (block.startsWith('**') && block.endsWith('**')) return `<p><strong>${block.slice(2, -2)}</strong></p>`;
+        return `<p>${block}</p>`;
+    }).join('');
+}
+
+function openArticle(id, articles) {
+    const article = articles.find(a => a.id === id);
+    if (!article) return;
+    const modal = document.getElementById('article-modal');
+    const content = document.getElementById('article-modal-content');
+    content.innerHTML = `
+        <h1>${article.title}</h1>
+        <div class="article-meta">
+            <span class="article-category">${article.category}</span>
+            <span class="article-date">${formatArticleDate(article.date)}</span>
+            <span class="article-read-time">${article.readTime}</span>
+        </div>
+        <div class="article-body">${renderArticleContent(article)}</div>
+        <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(102,126,234,0.15);font-size:0.85rem;color:#79747e;">
+            — <strong>Ajay Kant</strong> &nbsp;·&nbsp; aceakant@gmail.com &nbsp;·&nbsp;
+            <a href="https://linkedin.com/in/ajuhack" target="_blank" style="color:#667eea;">LinkedIn</a>
+        </div>
+    `;
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+}
+
+function closeArticle() {
+    document.getElementById('article-modal').hidden = true;
+    document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
+
+async function loadArticles() {
+    const grid = document.getElementById('articles-grid');
+    if (!grid) return;
+    try {
+        const res = await fetch('articles/data.json');
+        const data = await res.json();
+        const articles = data.articles.sort((a, b) => new Date(b.date) - new Date(a.date));
+        grid.innerHTML = articles.map(article => `
+            <div class="article-card" onclick="openArticle('${article.id}', ${JSON.stringify(articles).replace(/'/g, "&#39;")})">
+                <div class="article-card-accent"></div>
+                <div class="article-card-body">
+                    <div class="article-meta">
+                        <span class="article-category">${article.category}</span>
+                        <span class="article-date">${formatArticleDate(article.date)}</span>
+                        <span class="article-read-time">${article.readTime}</span>
+                    </div>
+                    <h3 class="article-title">${article.title}</h3>
+                    <p class="article-summary">${article.summary}</p>
+                    <div class="article-tags">
+                        ${article.tags.map(t => `<span class="article-tag">#${t}</span>`).join('')}
+                    </div>
+                    <span class="article-cta">Read article →</span>
+                </div>
+            </div>
+        `).join('');
+    } catch (e) {
+        grid.innerHTML = '<div class="articles-loading">Articles coming soon…</div>';
+    }
+}
+
 // EU Value Strip Data
 const euValueStats = [
     { number: '$10M', label: 'Annual Fraud-Loss Reduction' },
@@ -311,4 +402,5 @@ document.addEventListener('DOMContentLoaded', function() {
     renderEUValueStrip();
     renderRegulatory();
     renderOpportunity();
+    loadArticles();
 });
